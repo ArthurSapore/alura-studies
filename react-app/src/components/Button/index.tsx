@@ -1,8 +1,14 @@
+import { ReactNode } from 'react';
 import './style.scss'
 
-function Button (){
+type props ={
+    children: ReactNode
+}
+
+
+function Button ({children} : props){
     return(
-        <button className='botao'>teste</button>
+        <button className='botao'>{children}</button>
     );
 }
 

@@ -1,3 +1,4 @@
+import Item from './Item';
 import './style.scss'
 
 export default function List (){
@@ -9,6 +10,10 @@ export default function List (){
     {
         tarefa: 'Javascript',
         tempo: '1:30:00'
+    },
+    {
+        tarefa: 'Python',
+        tempo: '1:10:00'
     }];
 
     return(
@@ -16,10 +21,12 @@ export default function List (){
             <h2>Estudos do dia</h2>
             <ul>
                 {tarefas.map((item, index)=>
-                    <li className='item' key={index}>
-                        <h3>{item.tarefa}</h3>
-                        <span>{item.tempo}</span>
-                    </li>
+                    <Item 
+                        key = {index} 
+                        tarefa = {item.tarefa}
+                        tempo = {item.tempo}
+                    
+                    />
                 )}
             </ul>
         </aside>
