@@ -2,13 +2,13 @@ import { ReactNode } from 'react';
 import './style.scss'
 
 type props ={
-    children: ReactNode
+    children: ReactNode,
+    type?: "submit" | "reset" | "button" | undefined
 }
 
-
-function Button ({children} : props){
+function Button ({children, type} : props){
     return(
-        <button className='botao'>{children}</button>
+        <button type={type} className='botao'>{children}</button>
     );
 }
 

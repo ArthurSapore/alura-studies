@@ -1,31 +1,22 @@
 import Item from './Item';
 import './style.scss'
+import {Itarefas} from '../../types/tarefa'
 
-export default function List (){
+/**
+ * Outra forma de tipar objetos e funções
+ */
 
-    const tarefas = [{
-        tarefa: 'React',
-        tempo: '2:00:00'
-    },
-    {
-        tarefa: 'Javascript',
-        tempo: '1:30:00'
-    },
-    {
-        tarefa: 'Python',
-        tempo: '1:10:00'
-    }];
+export default function List ({tarefas} : {tarefas : Itarefas[]}){
 
     return(
         <aside className='listaTarefas'>
-            <h2>Estudos do dia</h2>
+            <h2 >Estudos do dia</h2>
             <ul>
                 {tarefas.map((item, index)=>
                     <Item 
                         key = {index} 
                         tarefa = {item.tarefa}
                         tempo = {item.tempo}
-                    
                     />
                 )}
             </ul>
