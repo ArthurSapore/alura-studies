@@ -1,11 +1,8 @@
+import { ITarefa } from '../../../types/tarefa'
 import '../style.scss'
 
-type props ={
-    tarefa: String,
-    tempo: String
-}
 
-export default function Item ({tarefa, tempo}: props){
+export default function Item ({tarefa, tempo}: ITarefa){
     return(
         <li className='item'>
             <h3>{tarefa}</h3>
