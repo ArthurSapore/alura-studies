@@ -10,14 +10,31 @@ function App() {
   /**
    * O react só consegue passar objetos de um elemento pai para o filho, 
    * 
+   * Normalmente esse tipo de controle é feito através do context API.
    */
   const [tarefas, setTarefas] = useState<ITarefa[]>([]);
+  const [selecionado, setSelecionado] = useState<ITarefa>();
+
+  function selecionaTarefa(tarefaSelecionada: ITarefa){
+    
+    setSelecionado(tarefaSelecionada);
+
+    /**
+     * Percorre todas as tarefas atualizando seus valores, 
+     * se o id for igual ao da tarefa selecionada, true, senão, false
+     */
+    setTarefas(tarefasAnteriores => tarefasAnteriores.map(tarefaAnterior =>({
+      ...tarefaAnterior,
+      selecionado: tarefaAnterior.id === tarefaSelecionada.id ? true : false
+    })))
+  }
+
 
   return (
     <div className="AppStyle">
       <Form setTarefas={setTarefas} />
-      <List tarefas={tarefas}/>
-      <Watch/> 
+      <List tarefas={tarefas} selecionaTarefa={selecionaTarefa} />
+      <Watch selecionado ={selecionado}/> 
     </div>
     
   );
