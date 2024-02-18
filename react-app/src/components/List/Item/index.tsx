@@ -13,9 +13,10 @@ interface props  {
 
 export default function Item ({tarefa, selecionaTarefa} :props ){
     return(
-        <li className={`item ${tarefa.selecionado? 'itemSelecionado' : '' }`} onClick={()=> selecionaTarefa(tarefa)}>
+        <li className={`item ${tarefa.selecionado? 'itemSelecionado' : '' } ${tarefa.finalizado? 'itemCompletado' : ''}`} onClick={()=> selecionaTarefa(tarefa)}>
             <h3>{tarefa.tarefa}</h3>
             <span>{tarefa.tempo}</span>
+            {tarefa.finalizado ? <span className="concluido"></span> : undefined}
         </li>
     )
 }

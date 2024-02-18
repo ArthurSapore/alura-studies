@@ -41,7 +41,7 @@ export default function Form ({setTarefas} : ISetTarefas){
             </div>
             <div className={style.inputContainer}>
                 <label htmlFor="tempo">Tempo</label>
-                <input type="time" step="1" name="tempo" min="00:00:00" onChange={(event) => setTempo(event.target.value)} value={tempo} max="23:59:" id="tempo" required />
+                <input type="time" step="1" name="tempo" min="00:00:00" onChange={(event) => setTempo(event.target.value)} value={tempo} max="23:59:59" id="tempo" required />
             </div>
             <Button type="submit">Adicionar</Button>
         </form>
