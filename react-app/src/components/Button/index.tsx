@@ -7,10 +7,17 @@ type props ={
     onClick?: ()=> void
 }
 
-function Button ({children, type, onClick} : props){
+/**
+ * Outra forma de escrever function component
+ * Melhor para documentações utilizando typescript
+ * @param param
+ * @returns 
+ */
+
+const Button : React.FC <props> = ({children, type, onClick})=>{
     return(
         <button onClick={onClick} type={type} className='botao'>{children}</button>
-    );
+    )
 }
 
 export default Button;
