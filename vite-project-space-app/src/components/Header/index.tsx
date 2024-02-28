@@ -11,7 +11,7 @@ const Headerstylized = styled.header`
 `
 
 
-const Header : React.FC<{}> = () =>{
+const Header : React.FC<NonNullable<unknown>> = () =>{
     return(
         <Headerstylized>
             <img src="../../public/images/Logo branco.svg" alt="" />

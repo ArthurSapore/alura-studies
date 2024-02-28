@@ -1,10 +1,9 @@
-import {styled} from "styled-components"
 import {StylizedContainer, StylizedIcon, StylizedInput} from "./style.ts"
 import lupa from "../../../public/images/lupa.svg"
 
 
 
-const Input : React.FC<{}> =()=>{
+const Input : React.FC<NonNullable<unknown>> =()=>{
     return(
         <StylizedContainer>
             <StylizedInput />
