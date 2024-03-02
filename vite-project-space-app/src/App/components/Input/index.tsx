@@ -1,5 +1,5 @@
 import {StylizedContainer, StylizedIcon, StylizedInput} from "./style.ts"
-import lupa from "../../../public/images/lupa.svg"
+import lupa from "/images/lupa.svg"
 
 
 

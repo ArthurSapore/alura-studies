@@ -1,9 +1,23 @@
 import {createGlobalStyle} from "styled-components"
 
+import GandhiSansBold from '../fonts/GandhiSans-Bold.otf'
+import GanhiSansRegular from '../fonts/GandhiSans-Regular.otf'
+
+
 const GlobalStyles = createGlobalStyle`
+    @font-face {
+        font-family: 'GandhiSansBold';
+        src: url(${GandhiSansBold});
+    }
+    @font-face {
+        font-family: 'GanhiSansRegular' ;
+        src: url(${GanhiSansRegular});
+    }
+
     html {
-    line-height: 1.15; 
-    -webkit-text-size-adjust: 100%; 
+        line-height: 1.15; 
+        -webkit-text-size-adjust: 100%; 
+        font-family: GandhiSansRegular;
     }
     body {
     margin: 0;

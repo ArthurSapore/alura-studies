@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
-
+/**
+ * É necessário que a propriedade tenha o $ para o styled components
+ * reconhecer que é uma propriedade de estilo.
+ */
 interface Props {
-    ativo: boolean;
+    $ativo: boolean;
 }
 
 export const StylizedItem  = styled.li<Props> `
@@ -16,7 +19,8 @@ export const StylizedItem  = styled.li<Props> `
 
     a{
        text-decoration :none ;
-       color: ${(Props) => Props.ativo ? '#7B78E5' : '#D9D9D9'};
+       color: ${(Props) => Props.$ativo ? '#7B78E5' : '#D9D9D9'};
+       font-family: ${(Props) => Props.$ativo ? 'GandhiSansBold' : 'GandhiSansRegular'};
     }
 
 `

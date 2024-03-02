@@ -11,8 +11,10 @@ interface Props {
 
 const ItemList : React.FC<Props> =({ children, iconAtivo, iconInativo, ativo = false}) => {
     return(
-        
-        <StylizedItem ativo={ativo}> 
+        /**
+         * Toda propriedade passada para um styled component deve ter o $ na frente.
+         */
+        <StylizedItem $ativo={ativo}> 
             <img src={ativo ? iconAtivo : iconInativo} alt="" />
             {children} 
         </StylizedItem>
